@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheFaders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0E-UG-Frx">
+                                <rect key="frame" x="40" y="191.5" width="944" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addressPatternTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Hxa-7n-HTo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="O61-dW-uWC"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="localhost" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-5y-gEI">
+                                <rect key="frame" x="40" y="91" width="824" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ipAddressTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="V1P-MN-6I3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ikK-al-JHs"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8080" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RiS-Li-w7q">
+                                <rect key="frame" x="884" y="91" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="portTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Im0-3d-0DL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8ds-b2-kRS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Port" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAe-LD-kcV">
+                                <rect key="frame" x="917.5" y="60" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss4-Ie-2mh">
+                                <rect key="frame" x="411" y="60" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa2-aT-np3">
+                                <rect key="frame" x="443" y="404" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SAVE"/>
+                                <variation key="heightClass=regular-widthClass=regular" hidden="NO"/>
+                                <connections>
+                                    <segue destination="VbA-Wr-6Tt" kind="show" id="NFv-tF-jh6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D4-SP-5Io">
+                                <rect key="frame" x="443" y="320" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="TEST">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LF2-IR-fsF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address Pattern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsn-9C-wqG">
+                                <rect key="frame" x="415" y="167" width="123" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pR0-G3-MbF"/>
+                    <connections>
+                        <outlet property="addressPatternLabel" destination="k0E-UG-Frx" id="mfQ-S8-UbM"/>
+                        <outlet property="ipAddressLabel" destination="weZ-5y-gEI" id="fMn-X7-NsN"/>
+                        <outlet property="portLabel" destination="RiS-Li-w7q" id="n65-lS-PGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.5234375" y="132.8125"/>
+        </scene>
+        <!--Fader View Controller-->
+        <scene sceneID="Egu-Bm-sEG">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="VbA-Wr-6Tt" userLabel="Fader View Controller" customClass="ShowViewController" customModule="TheFaders" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="7Ub-Ba-yNp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="p3U-2I-laG">
+                                <rect key="frame" x="20" y="22" width="975" height="710"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lj-CZ-bF7" userLabel="slider1" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au8-3a-kUs">
+                                                <rect key="frame" x="-0.5" y="-27.5" width="31" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.99607843137254903" green="0.094117647058823528" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Au8-3a-kUs" secondAttribute="bottom" constant="718" id="Vf7-LZ-MRR"/>
+                                            <constraint firstItem="Au8-3a-kUs" firstAttribute="centerX" secondItem="8lj-CZ-bF7" secondAttribute="centerX" id="Y2Q-kV-5fK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.99607843137254903" green="0.094117647058823528" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.99607843137254903" green="0.094117647058823528" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-pr-eKD" userLabel="slider2" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="105" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YELLOW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lni-XC-uV3">
+                                                <rect key="frame" x="-15" y="-26" width="60" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Lni-XC-uV3" secondAttribute="bottom" constant="718" id="laI-ch-mqZ"/>
+                                            <constraint firstItem="Lni-XC-uV3" firstAttribute="centerX" secondItem="hVd-pr-eKD" secondAttribute="centerX" id="ma3-23-7FU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.97254901960784312" green="0.96862745098039216" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.97254901960784312" green="0.96862745098039216" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqQ-Fn-ViW" userLabel="slider3" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="210" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLy-dL-9Hc">
+                                                <rect key="frame" x="-14.5" y="-27.5" width="59.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.67843137254901964" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YLy-dL-9Hc" firstAttribute="centerX" secondItem="PqQ-Fn-ViW" secondAttribute="centerX" id="1y1-ch-9Yz"/>
+                                            <constraint firstAttribute="bottom" secondItem="YLy-dL-9Hc" secondAttribute="bottom" constant="718" id="PCF-Vj-fMD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.67843137254901964" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.67843137254901964" green="0.0" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg2-pa-gP2" userLabel="slider4" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="315" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHT PINK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-h4-bzo">
+                                                <rect key="frame" x="-28" y="-27.5" width="86" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="1" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ye8-h4-bzo" secondAttribute="bottom" constant="718" id="tJ7-tF-6jU"/>
+                                            <constraint firstItem="ye8-h4-bzo" firstAttribute="centerX" secondItem="Dg2-pa-gP2" secondAttribute="centerX" id="wTS-dt-tja"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="1" green="0.64313725490196072" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="1" green="0.64313725490196072" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cc7-Z1-yWW" userLabel="slider5" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="420" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHT BLUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pId-oP-h2u">
+                                                <rect key="frame" x="-29.5" y="-27.5" width="89.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.83921568627450982" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pId-oP-h2u" firstAttribute="centerX" secondItem="Cc7-Z1-yWW" secondAttribute="centerX" id="7Sm-MD-sRe"/>
+                                            <constraint firstAttribute="bottom" secondItem="pId-oP-h2u" secondAttribute="bottom" constant="718" id="a7B-Uz-3SJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.0" green="0.83921568627450982" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.0" green="0.83921568627450982" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIw-2O-KXF" userLabel="slider6" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="525" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DARK BLUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elF-zR-Nlf">
+                                                <rect key="frame" x="-27.5" y="-27.5" width="85.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.2196078431372549" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="elF-zR-Nlf" secondAttribute="bottom" constant="718" id="8tT-Tu-dIg"/>
+                                            <constraint firstItem="elF-zR-Nlf" firstAttribute="centerX" secondItem="HIw-2O-KXF" secondAttribute="centerX" id="hm3-90-IBg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.2196078431372549" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.2196078431372549" green="0.0" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wA-15-JWe" userLabel="slider7" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="630" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GREEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMC-ho-X5v">
+                                                <rect key="frame" x="-11" y="-27.5" width="52" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.043137254901960784" green="0.8784313725490196" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="uMC-ho-X5v" secondAttribute="bottom" constant="718" id="BVS-di-OOx"/>
+                                            <constraint firstItem="uMC-ho-X5v" firstAttribute="centerX" secondItem="2wA-15-JWe" secondAttribute="centerX" id="g9r-YA-4Ha"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.043137254901960784" green="0.8784313725490196" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.043137254901960784" green="0.8784313725490196" blue="0.31372549019607843" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUd-bm-USZ" userLabel="slider8" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="735" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DARK PINK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE6-Z2-mHQ">
+                                                <rect key="frame" x="-25.5" y="-27.5" width="81.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.9882352941176471" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="fE6-Z2-mHQ" secondAttribute="bottom" constant="718" id="VFs-Mg-nem"/>
+                                            <constraint firstItem="fE6-Z2-mHQ" firstAttribute="centerX" secondItem="cUd-bm-USZ" secondAttribute="centerX" id="tWE-xo-FnI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="0.9882352941176471" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="0.9882352941176471" green="0.0" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-IR-5WG" userLabel="slider9" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="840" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4L-fP-XF4">
+                                                <rect key="frame" x="-10" y="-27.5" width="50" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="F4L-fP-XF4" firstAttribute="centerX" secondItem="sAl-IR-5WG" secondAttribute="centerX" id="60N-b9-heT"/>
+                                            <constraint firstAttribute="bottom" secondItem="F4L-fP-XF4" secondAttribute="bottom" constant="718" id="g13-OF-nqk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-Td-ols" userLabel="slider10" customClass="VSSlider" customModule="VerticalSteppedSlider">
+                                        <rect key="frame" x="945" y="0.0" width="30" height="710"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-or-9ah">
+                                                <rect key="frame" x="-17.5" y="-27.5" width="65.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="1" green="0.65098039215686276" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="m1d-or-9ah" firstAttribute="centerX" secondItem="cKX-Td-ols" secondAttribute="centerX" id="8fX-uW-sIH"/>
+                                            <constraint firstAttribute="bottom" secondItem="m1d-or-9ah" secondAttribute="bottom" constant="718" id="Gae-rM-c97"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="markWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minimumTrackTintColor">
+                                                <color key="value" red="1" green="0.65098039215686276" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maximumTrackTintColor">
+                                                <color key="value" red="1" green="0.65098039215686276" blue="0.34509803921568627" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trackExtendsUnderThumb" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isContinuous" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="vertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ascending" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                                                <real key="value" value="0.0040000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8oP-bV-Dms"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="fHO-i0-Jtt"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUb-80-RE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750.5859375" y="132.8125"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2wA-15-JWe">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="8lj-CZ-bF7">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="Cc7-Z1-yWW">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="Dg2-pa-gP2">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="HIw-2O-KXF">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="PqQ-Fn-ViW">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="cKX-Td-ols">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="cUd-bm-USZ">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="hVd-pr-eKD">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+        <designable name="sAl-IR-5WG">
+            <size key="intrinsicContentSize" width="30" height="704"/>
+        </designable>
+    </designables>
+</document>

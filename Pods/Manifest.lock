@@ -1,0 +1,24 @@
+PODS:
+  - SwiftOSC (1.3.1)
+  - VerticalSlider (2.0.0)
+  - VerticalSteppedSlider (0.1.0)
+
+DEPENDENCIES:
+  - SwiftOSC
+  - VerticalSlider
+  - VerticalSteppedSlider
+
+SPEC REPOS:
+  trunk:
+    - SwiftOSC
+    - VerticalSlider
+    - VerticalSteppedSlider
+
+SPEC CHECKSUMS:
+  SwiftOSC: 4e22674bbd1139daf659024ab39636b8952b69f1
+  VerticalSlider: 655f2bc3ed062bac13e21c174f5ff93b8308571d
+  VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
+
+PODFILE CHECKSUM: d07af73a40dda55ea616489af85863a015bd8c75
+
+COCOAPODS: 1.11.2
